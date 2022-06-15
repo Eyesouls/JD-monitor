@@ -1,5 +1,6 @@
 /*
 DPQDTK: token1&token2
+0 0 0 * 1 *
 */
 let token = []
 if (process.env.DPQDTK) {
