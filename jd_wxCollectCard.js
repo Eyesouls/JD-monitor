@@ -1,21 +1,11 @@
 /*
 集卡抽奖通用活动
-
-第一个CK失效会退出脚本
-
-
-请求太频繁会被黑ip
-
 变量：
 //export jd_wxCollectCard_activityId="活动ID"
 活动网址：
 //https://lzkjdz-isv.isvjcloud.com/wxCollectCard/activity/activity?activityId=xxxxxxx
 
-cron:1 1 1 1 *
-============Quantumultx===============
-[task_local]
-#集卡抽奖通用活动
-1 1 1 1 * jd_wxCollectCard.js, tag=集卡抽奖通用活动, enabled=true
+0 0 0 * 1 *
 
 */
 
