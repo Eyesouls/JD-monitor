@@ -2,7 +2,6 @@
 开卡-9
 0 0 0 * 1 *
 */
-
 const $ = new Env('开卡-9');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 const notify = $.isNode() ? require('./sendNotify') : '';
