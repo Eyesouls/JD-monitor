@@ -1,24 +1,11 @@
 /*
 购物车锦鲤通用活动
-
-第一个CK失效会退出脚本
-
-助力显示可能会有误差，以活动界面成功邀请人数为准
-
-活动有BUG，直接加购不用助力也行。
-
-请求太频繁会被黑ip
-
 变量：
 //export jd_wxCartKoi_activityId="活动ID"
 活动网址：
 //https://lzkjdz-isv.isvjcloud.com/wxCartKoi/cartkoi/activity?activityId=xxxxxxx
 
-cron:1 1 1 1 *
-============Quantumultx===============
-[task_local]
-#购物车锦鲤通用活动
-1 1 1 1 * jd_wxCartKoi.js, tag=购物车锦鲤通用活动, enabled=true
+0 0 0 * 1 *
 
 */
 
