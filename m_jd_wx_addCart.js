@@ -1,6 +1,6 @@
-//问题反馈:https://t.me/Wall_E_Channel
 /*
-7 7 7 7 7 m_jd_wx_addCart.js
+0 0 0 * 1 *
+控制跑多少个号变量 M_Number_of_runs
 */
 let mode = __dirname.includes('magic')
 const {Env} = mode ? require('./magic') : require('./magic')
@@ -178,5 +178,5 @@ $.after = async function () {
         || ''}\n`);
     $.msg.push($.activityUrl)
 }
-$.run({whitelist: ['1-5'], wait: [3000, 5000]}).catch(
+$.run({whitelist: [process.env.M_Number_of_runs], wait: [3000, 5000]}).catch(
     reason => $.log(reason));
