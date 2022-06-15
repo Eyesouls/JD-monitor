@@ -1,3 +1,7 @@
+/*
+0 0 0 * 1 *
+控制跑多少个号变量 M_Number_of_runs
+*/
 let mode = __dirname.includes('magic')
 const { Env } = mode ? require('./magic1') : require('./magic')
 const $ = new Env('M收藏有礼');
@@ -62,7 +66,7 @@ $.logic = async function () {
     }
     await DelShopFav()
 };
-$.run({ wait: [5000, 20000], whitelist: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] })
+$.run({ wait: [5000, 20000], whitelist: [process.env.M_Number_of_runs] })
     .catch(reason => $.log(reason))
 
 async function GiveShopGift () {
