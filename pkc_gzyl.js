@@ -1,30 +1,7 @@
 /*
-更新时间：2022-4-10
-TG皮卡车 https://t.me/topstyle996
-
 # 变量
 export PKC_GZYL=""
-
-抓body方法：
-添加重写，点击带"关注有礼"的店铺即可获取。能够实现：车头获取，全车跟上。（免sign、token）
-
-圈x或v2p：
-可在boxjs(皮卡车-TG推送)设置tg推送，获取变量自动给机器人发送，实现自助式监控。
-boxjs订阅：https://git.metauniverse-cn.com/https://raw.githubusercontent.com/curtinlv/gd/main/dy/boxjs.json
-
-兼容圈x、v2p
-#【圈x】重写订阅地址: https://git.metauniverse-cn.com/https://raw.githubusercontent.com/curtinlv/gd/main/dy/cx.conf
-#【v2p】重写订阅地址: https://git.metauniverse-cn.com/https://raw.githubusercontent.com/curtinlv/gd/main/dy/cx_v2p.json
-
-[rewrite_remote]
-https://git.metauniverse-cn.com/https://raw.githubusercontent.com/curtinlv/gd/main/dy/cx.conf, tag=订阅-Curtin, update-interval=172800, opt-parser=false, enabled=true
-
-[task_local]
-#获取body后执行
-10 10 * * * https://git.metauniverse-cn.com/https://raw.githubusercontent.com/curtinlv/gd/main/jk_script/pkc_gzyl.js, tag=PKC-关注有礼, enabled=false
-
-
-
+0 0 0 * 1 *
 */
 const $ = new Env('PKC关注有礼');
 let cookiesArr = [], cookie = '',  notify,  allMessage = '' ;
