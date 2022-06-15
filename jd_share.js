@@ -1,7 +1,5 @@
 /* 
-关注 https://t.me/okyydsnb
-7 7 7 7 7
-注意控制ck数量
+0 0 0 * 1 *
 */
 
 const $ = new Env("分享有礼");
