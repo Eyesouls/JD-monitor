@@ -16,7 +16,7 @@
 
 */
 
-const $ = new Env('开卡通用');
+const $ = new Env('入会开卡');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 const notify = $.isNode() ? require('./sendNotify') : '';
 //IOS等用户直接用NobyDa的jd cookie
