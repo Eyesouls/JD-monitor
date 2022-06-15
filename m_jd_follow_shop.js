@@ -1,5 +1,6 @@
 /*
-7 7 7 7 7 m_jd_follow_shop.js
+0 0 0 * 1 * m_jd_follow_shop.js
+控制跑多少个号变量 M_Number_of_runs
 */
 let mode = __dirname.includes('magic')
 const {Env} = mode ? require('./magic') : require('./magic')
@@ -59,7 +60,7 @@ $.after = async function () {
         $.msg.push($.activityUrl);
     }
 }
-$.run({whitelist: ['1-5'], wait: [1000, 3000]}).catch(reason => $.log(reason))
+$.run({whitelist: [process.env.M_Number_of_runs], wait: [1000, 3000]}).catch(reason => $.log(reason))
 
 async function drawShopGift() {
     $.log('店铺信息', $.shopId, $.venderId, $.activityId)
