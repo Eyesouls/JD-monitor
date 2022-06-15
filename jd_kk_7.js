@@ -1,6 +1,6 @@
 /*
 开卡-7
-环境变量 NO_RUSH=false
+0 0 0 * 1 *
 */
 const $ = new Env("开卡-7");
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
@@ -21,9 +21,6 @@ if ($.isNode()) {
     cookiesArr.push(...[$.getdata('CookieJD2'), $.getdata('CookieJD')]);
     cookiesArr.reverse();
     cookiesArr = cookiesArr.filter(item => !!item);
-}
-if (process.env.NO_RUSH && process.env.NO_RUSH != "") {
-    isRush = process.env.NO_RUSH;
 }
 !(async () => {
     if (!cookiesArr[0]) {
@@ -66,14 +63,6 @@ if (process.env.NO_RUSH && process.env.NO_RUSH != "") {
             $.activityId = process.env.Jd_kk_7_activityId
             $.activityShopId = process.env.Jd_kk_7_shareUuid
             $.activityUrl = `https://lzdz1-isv.isvjd.com/dingzhi/dz/openCard/activity/${$.authorNum}?activityId=${$.activityId}&shareUuid=${encodeURIComponent($.authorCode)}&adsource=null&shareuserid4minipg=null&shopid=${$.activityShopId}&lng=00.000000&lat=00.000000&sid=&un_area=`
-            if (isRush === true) {
-                console.log("未检测到不执行环境变量，执行任务")
-                await rush();
-            } else {
-                console.log("检测到不执行环境变量，退出任务，环境变量 NO_RUSH")
-                break
-            }
-            await $.wait(3000)
             if ($.bean > 0) {
                 message += `\n【京东账号${$.index}】${$.nickName || $.UserName} \n       └ 获得 ${$.bean} 京豆。`
             }
