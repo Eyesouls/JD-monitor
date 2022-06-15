@@ -1,5 +1,5 @@
-/**
-* 测试集合青蛙和KR的修改适配
+/*
+0 0 0 * 1 *
 */
 const $ = new Env('测试开卡');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
