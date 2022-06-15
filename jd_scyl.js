@@ -1,5 +1,5 @@
 /*
-0 0 0 * 1 * 1
+0 0 0 * 1 *
 控制跑多少个号变量 M_Number_of_runs
 */
 let mode = __dirname.includes('magic')
