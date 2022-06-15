@@ -9,13 +9,7 @@
 //export DPLHTY="04c1bf1191d044c6ae059e_22040802"
 如需做浏览任务请设置环境变量：
 //export opencard_toShop="true"
-活动ID自行查找
-第一个账号助力作者 其他依次助力CK1
-注意：第一个CK黑号会全部助力所填写的助力码
-============Quantumultx===============
-[task_local]
-#大牌联合通用开卡
-1 1 1 1 * jd_opencardDPLHTY.js, tag=大牌联合通用开卡, enabled=true
+0 0 0 * 1 *
 */
 //如需做浏览任务请设置环境变量，默认关闭
 let opencard_toShop = "false"
