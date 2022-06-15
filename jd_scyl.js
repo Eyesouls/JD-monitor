@@ -1,5 +1,5 @@
 /*
-0 0 0 * 1 *
+0 0 0 * 1 * jd_scyl.js
 控制跑多少个号变量 M_Number_of_runs
 */
 let mode = __dirname.includes('magic')
