@@ -11,7 +11,7 @@
 //export VENDER_ID=""
 ## 最小入会值 （默认10）
 
-1 1 1 1 * jd_OpenCard_Force.js, tag=入会开卡领取礼包(通用), enabled=true
+0 0 0 * 1 *
 
 
 */
