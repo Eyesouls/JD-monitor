@@ -7,10 +7,7 @@ JOY通用开卡活动
 奖励未到账请再次运行本脚本
 日志显示已入会，才代表奖励已经领取
 
-cron:2 1 * * *
-============Quantumultx===============
-[task_local]
-2 1 * * * jd_joyopen.js, tag=JOY通用开卡活动, enabled=true
+0 0 0 * 1 *
 
 */
 const $ = new Env('JOY通用开卡活动');
