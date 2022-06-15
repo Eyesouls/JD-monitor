@@ -1,22 +1,13 @@
 /*
-入会开卡领取礼包(通用)
-
-自用，拉库请自行禁用
-
-使用环境变量 VENDER_ID 提供 venderid，多个用&连接
-脚本大部分内容包括加密部分代码提取自 smiek2121 的开卡脚本
-
 变量：
 ## 入会开卡
 //export VENDER_ID=""
 ## 最小入会值 （默认10）
-
+//export OPENCARD_BEAN=""
 0 0 0 * 1 *
-
-
 */
 
-const $ = new Env('入会开卡');
+const $ = new Env('入会开卡领取礼');
 const jdCookieNode = $.isNode() ? require('./jdCookie.js') : '';
 const notify = $.isNode() ? require('./sendNotify') : '';
 //IOS等用户直接用NobyDa的jd cookie
@@ -91,6 +82,16 @@ async function run() {
             }
             if($.errorJoinShop.indexOf('活动太火爆，请稍后再试') > -1){
                 console.log('第3次 重新开卡')
+                await $.wait(500)
+                await joinShop()
+            }
+			if($.errorJoinShop.indexOf('活动太火爆，请稍后再试') > -1){
+                console.log('第4次 重新开卡')
+                await $.wait(500)
+                await joinShop()
+            }
+			if($.errorJoinShop.indexOf('活动太火爆，请稍后再试') > -1){
+                console.log('第5次 重新开卡')
                 await $.wait(500)
                 await joinShop()
             }
