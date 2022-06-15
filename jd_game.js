@@ -3,21 +3,8 @@
 活动ID环境变量 WXGAME_ACT_ID
 https://lzkj-isv.isvjcloud.com/wxgame/activity/8530275?activityId=xxxxxx
 
-即时任务，无需cron,短期或者长期请参考活动规则设置cron
-============Quantumultx===============
-[task_local]
-#通用游戏任务
-31 1 1 1 1 https://raw.githubusercontent.com/KingRan/KR/main/jd_game.js, tag=通用游戏任务, img-url=https://raw.githubusercontent.com/Orz-3/mini/master/Color/jd.png, enabled=true
+0 0 0 * 1 *
 
-================Loon==============
-[Script]
-cron "31 1 1 1 1" script-path=https://raw.githubusercontent.com/KingRan/KR/main/jd_game.js,tag=通用游戏任务
-
-===============Surge=================
-通用游戏任务 = type=cron,cronexp="31 1 1 1 1",wake-system=1,timeout=3600,script-path=https://raw.githubusercontent.com/KingRan/KR/main/jd_game.js
-
-============小火箭=========
-通用游戏任务 = type=cron,script-path=https://raw.githubusercontent.com/KingRan/KR/main/jd_game.js, cronexpr="31 1 1 1 1", timeout=3600, enable=true
 */
 const $ = new Env('通用游戏任务');
 
