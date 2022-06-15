@@ -201,7 +201,7 @@ async function sendNotify(
   text,
   desp,
   params = {},
-  author = process.env.TZ_GL,
+  author = '\n\n本通知 By：可萌二号',
 ) {
   //提供6种通知
   desp += author; //增加作者信息，防止被贩卖等
